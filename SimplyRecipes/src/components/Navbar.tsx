@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Button, IconButton, makeStyles, Theme } from '@material-ui/core';
@@ -95,7 +95,16 @@ const useStyles = makeStyles((theme: Theme) => {
 });
 
 const Navbar: React.FC = () => {
+  const [show, setShow] = useState(false);
   const classes = useStyles();
+
+  const links = [
+    { to: '/', text: 'Home' },
+    { to: '/about', text: 'About' },
+    { to: '/tags', text: 'Tags' },
+    { to: '/recipes', text: 'Recipes' },
+  ];
+
   return (
     <nav className={classes.root}>
       <div className={classes.navCenter}>
@@ -103,29 +112,31 @@ const Navbar: React.FC = () => {
           <Link to="/">
             <img src={logo} alt="SimplyRecipes" />
           </Link>
-          <IconButton className={classes.navBtn} aria-label="open menu">
+          <IconButton
+            className={classes.navBtn}
+            aria-label="open menu"
+            onClick={() => setShow(!show)}
+          >
             <MenuIcon />
           </IconButton>
         </div>
-        <div className={`${classes.navLinks} ${classes.showLinks}`}>
-          <Link to="/" className={classes.navLink} activeClassName={classes.activeLink}>
-            Home
-          </Link>
-          <Link to="/about" className={classes.navLink} activeClassName={classes.activeLink}>
-            About
-          </Link>
-          <Link to="/tags" className={classes.navLink} activeClassName={classes.activeLink}>
-            Tags
-          </Link>
-          <Link to="/recipes" className={classes.navLink} activeClassName={classes.activeLink}>
-            Recipes
-          </Link>
+        <div className={`${classes.navLinks} ${show ? classes.showLinks : ''}`}>
+          {links.map(link => (
+            <Link
+              to={link.to}
+              className={classes.navLink}
+              activeClassName={classes.activeLink}
+              onClick={() => setShow(!show)}
+            >
+              {link.text}
+            </Link>
+          ))}
           <Link
             to="/contact"
             className={`${classes.navLink} ${classes.contactLink}`}
             activeClassName={classes.activeLink}
           >
-            <Button variant="contained" color="primary">
+            <Button variant="contained" color="primary" onClick={() => setShow(!show)}>
               Contact
             </Button>
           </Link>
