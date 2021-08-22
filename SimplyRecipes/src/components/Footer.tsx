@@ -5,12 +5,11 @@ const useStyles = makeStyles((theme: Theme) => {
   return {
     root: {
       display: 'flex',
-      height: '4rem',
+      height: theme.spacing(16),
       textAlign: 'center',
       alignItems: 'center',
       justifyContent: 'center',
       backgroundColor: theme.palette.grey[900],
-      padding: theme.spacing(3),
       color: theme.palette.grey[200],
       '& h5': { marginBottom: 0 },
       '& p': { marginBottom: 0 },
