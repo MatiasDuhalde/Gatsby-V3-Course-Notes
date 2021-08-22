@@ -1,14 +1,23 @@
 import React from 'react';
 import { ThemeProvider } from '@material-ui/core/styles';
+import { CssBaseline, makeStyles } from '@material-ui/core';
 import Footer from './Footer';
 import Navbar from './Navbar';
 import theme from '../theme';
-import { CssBaseline } from '@material-ui/core';
+
+const useStyles = makeStyles({
+  root: {
+    a: {
+      textDecoration: 'none',
+    },
+  },
+});
 
 const Layout: React.FC = props => {
+  const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
+      <CssBaseline classes={classes.root} />
       <Navbar />
       {props.children}
       <Footer />
