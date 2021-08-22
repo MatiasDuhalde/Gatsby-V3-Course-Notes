@@ -6,5 +6,13 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: ['gatsby-plugin-material-ui'],
+  plugins: [
+    {
+      resolve: 'gatsby-plugin-layout',
+      options: {
+        component: require.resolve('./src/components/Layout.tsx'),
+      },
+    },
+    'gatsby-plugin-material-ui',
+  ],
 };
