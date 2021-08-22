@@ -131,15 +131,13 @@ const Navbar: React.FC = () => {
               {link.text}
             </Link>
           ))}
-          <Link
-            to="/contact"
-            className={`${classes.navLink} ${classes.contactLink}`}
-            activeClassName={classes.activeLink}
-          >
-            <Button variant="contained" color="primary" onClick={() => setShow(!show)}>
-              Contact
-            </Button>
-          </Link>
+          <div className={`${classes.navLink} ${classes.contactLink}`}>
+            <Link to="/contact">
+              <Button variant="contained" color="primary" onClick={() => setShow(!show)}>
+                Contact
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
