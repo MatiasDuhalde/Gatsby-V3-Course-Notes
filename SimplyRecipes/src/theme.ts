@@ -1,8 +1,12 @@
 import { createTheme, responsiveFontSizes } from '@material-ui/core/styles';
 
+const baseTheme = createTheme({
+  spacing: factor => `${0.25 * factor}rem`,
+});
+
 // A custom theme for this app
 const theme = createTheme({
-  spacing: factor => `${0.25 * factor}rem`,
+  ...baseTheme,
   overrides: {
     MuiCssBaseline: {
       '@global': {
@@ -13,6 +17,11 @@ const theme = createTheme({
         },
       },
     },
+    // MuiTypography: {
+    //   gutterBottom: {
+    //     marginBottom: baseTheme.spacing(20),
+    //   },
+    // },
   },
 });
 
