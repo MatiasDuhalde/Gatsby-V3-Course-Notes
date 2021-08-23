@@ -1,6 +1,7 @@
 import React from 'react';
-import { PageProps } from 'gatsby';
-import { makeStyles, Theme } from '@material-ui/core';
+import { PageProps, Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
+import { Button, makeStyles, Theme, Typography } from '@material-ui/core';
 import BasePage from '../components/BasePage';
 
 const useStyles = makeStyles((theme: Theme) => {
@@ -31,7 +32,33 @@ const useStyles = makeStyles((theme: Theme) => {
 
 const AboutPage: React.FC<PageProps> = () => {
   const classes = useStyles();
-  return <BasePage></BasePage>;
+  return (
+    <BasePage>
+      <section className={classes.root}>
+        <article>
+          <Typography variant="h2" gutterBottom>
+            I'm baby coloring book poke taxidermy
+          </Typography>
+          <Typography variant="body1" gutterBottom>
+            Taxidermy forage glossier letterpress heirloom before they sold out you probably haven't
+            heard of them banh mi biodiesel chia.
+          </Typography>
+          <Typography variant="body1" gutterBottom>
+            Taiyaki tumblr flexitarian jean shorts brunch, aesthetic salvia retro.
+          </Typography>
+          <Link to="/contact">
+            <Button variant="outlined">Contact</Button>
+          </Link>
+        </article>
+        <StaticImage
+          src="../assets/images/about.jpg"
+          alt="Person pouring salt in bowl"
+          className={classes.aboutImg}
+          placeholder="blurred"
+        />
+      </section>
+    </BasePage>
+  );
 };
 
 export default AboutPage;

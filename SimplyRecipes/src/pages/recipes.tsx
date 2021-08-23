@@ -1,8 +1,13 @@
 import React from 'react';
 import { PageProps } from 'gatsby';
+import BasePage from '../components/BasePage';
 
 const RecipesPage: React.FC<PageProps> = () => {
-  return <h2>This is the recipes page</h2>;
+  return (
+    <BasePage>
+      <h1>Recipes Page</h1>
+    </BasePage>
+  );
 };
 
 export default RecipesPage;

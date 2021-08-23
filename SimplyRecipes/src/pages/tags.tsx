@@ -1,8 +1,13 @@
 import React from 'react';
 import { PageProps } from 'gatsby';
+import BasePage from '../components/BasePage';
 
 const TagsPage: React.FC<PageProps> = () => {
-  return <h2>This is the tags page</h2>;
+  return (
+    <BasePage>
+      <h1>Tags Page</h1>
+    </BasePage>
+  );
 };
 
 export default TagsPage;
