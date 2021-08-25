@@ -5,12 +5,14 @@ import Footer from './Footer';
 import Navbar from './Navbar';
 import theme from '../theme';
 
-const useStyles = makeStyles({
-  root: {
-    a: {
-      textDecoration: 'none',
+const useStyles = makeStyles(() => {
+  return {
+    root: {
+      a: {
+        textDecoration: 'none',
+      },
     },
-  },
+  };
 });
 
 const Layout: React.FC = props => {
