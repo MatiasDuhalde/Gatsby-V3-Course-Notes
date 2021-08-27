@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme: Theme) => {
     heroText: {
       color: theme.palette.common.white,
       textAlign: 'center',
-      [theme.breakpoints.up('md')]: {
+      [theme.breakpoints.up('sm')]: {
         '& h1': {
           fontSize: theme.spacing(16),
           marginBottom: theme.spacing(0),
