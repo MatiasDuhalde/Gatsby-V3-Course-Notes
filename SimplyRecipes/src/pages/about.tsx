@@ -17,14 +17,14 @@ const useStyles = makeStyles((theme: Theme) => {
       [theme.breakpoints.up('md')]: {
         gridTemplateColumns: '1fr 1fr',
         alignItems: 'center',
-        heigth: '400px',
+        height: '400px',
       },
     },
     aboutImg: {
       borderRadius: theme.shape.borderRadius,
       height: '500px',
       [theme.breakpoints.up('md')]: {
-        heigth: '100%',
+        height: '100%',
       },
     },
   };
@@ -37,11 +37,11 @@ const AboutPage: React.FC<PageProps> = () => {
       <section className={classes.root}>
         <article>
           <Typography variant="h2" gutterBottom>
-            I'm baby coloring book poke taxidermy
+            I&#39;m baby coloring book poke taxidermy
           </Typography>
           <Typography variant="body1" gutterBottom>
-            Taxidermy forage glossier letterpress heirloom before they sold out you probably haven't
-            heard of them banh mi biodiesel chia.
+            Taxidermy forage glossier letterpress heirloom before they sold out you probably
+            haven&#39;t heard of them banh mi biodiesel chia.
           </Typography>
           <Typography variant="body1" gutterBottom>
             Taiyaki tumblr flexitarian jean shorts brunch, aesthetic salvia retro.

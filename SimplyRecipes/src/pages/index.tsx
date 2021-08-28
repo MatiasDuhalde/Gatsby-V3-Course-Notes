@@ -1,8 +1,7 @@
 import React from 'react';
 import { PageProps } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import { Theme, Typography } from '@material-ui/core';
-import { makeStyles } from '@material-ui/styles';
+import { Theme, Typography, makeStyles } from '@material-ui/core';
 import BasePage from '../components/BasePage';
 
 const useStyles = makeStyles((theme: Theme) => {
@@ -18,7 +17,7 @@ const useStyles = makeStyles((theme: Theme) => {
       [theme.breakpoints.up('md')]: {
         gridTemplateColumns: '1fr 1fr',
         alignItems: 'center',
-        heigth: '400px',
+        height: '400px',
       },
     },
     hero: {
