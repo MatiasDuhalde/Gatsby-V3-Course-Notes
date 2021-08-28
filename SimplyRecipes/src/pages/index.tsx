@@ -1,7 +1,8 @@
 import React from 'react';
 import { PageProps } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import { Theme, Typography, makeStyles } from '@material-ui/core';
+import { makeStyles, Theme } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 import BasePage from '../components/BasePage';
 
 const useStyles = makeStyles((theme: Theme) => {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { PageProps } from 'gatsby';
-import { makeStyles, Theme, Typography } from '@material-ui/core';
+import { makeStyles, Theme } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme: Theme) => {
   return {
