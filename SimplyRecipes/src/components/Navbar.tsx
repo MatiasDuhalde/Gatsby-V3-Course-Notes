@@ -121,8 +121,9 @@ const Navbar: React.FC = () => {
           </IconButton>
         </div>
         <div className={`${classes.navLinks} ${show ? classes.showLinks : ''}`}>
-          {links.map(link => (
+          {links.map((link, index) => (
             <Link
+              key={index}
               to={link.to}
               className={classes.navLink}
               activeClassName={classes.activeLink}
