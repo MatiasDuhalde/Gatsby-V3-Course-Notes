@@ -261,16 +261,7 @@ form > *:last-child {
 /*#########*/
 /* Recipes */
 /*#########*/
-.recipes-container {
-  display: grid;
-  gap: 2rem 1rem;
-}
 
-.recipes-list {
-  display: grid;
-  gap: 2rem 1rem;
-  padding-bottom: 3rem;
-}
 .tags-container {
   order: 1;
   display: flex;
